@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body>
+<table style="width:100%">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>pwd</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Anuja</td>
+    <td>anuja</td>
+  </tr>
+   <tr>
+    <td>2</td>
+    <td>Ash</td>
+    <td>ash</td>
+  </tr>
+   <tr>
+    <td>3</td>
+    <td>Samhita</td>
+    <td>samhita</td>
+  </tr>
+ 
+  </tr>
+</table>
+
+</body>
+<button onclick="Calc()"> Logout </button> 
+
+<script type="text/javascript">
+
+function Calc()
+{
+	var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'http://localhost:3000/logout', true);
+    xhr.onreadystatechange = function() {
+	    if (xhr.readyState === 4)  { 
+	        var serverResponse = xhr.responseText;
+	    	  top.location.href = 'login.html';
+	    }
+    };
+    xhr.send(null);
+
+}
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
+
